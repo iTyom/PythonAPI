@@ -5,15 +5,17 @@
     </head>
     <body>
     <ul>
-      {% for row in rows %}
+      {% for rowip in rows %}
         <li>
-           {{ row[1] }} <a href="/ipw/delete/{{row[1]}}">Supprimé</a>
+           {{ rowip[0] }} <a href="/ipw/delete/{{rowip[0]}}">Supprimé</a>
         </li>
       {% endfor %}
     </ul>
     <a href="/ipb">Voir les IP blacklistés</a>
     <a href="/ipw">Voir les IP whitelistés</a>
     <a href="/showlog">Voir les logs</a>
+    <a href="/certificate">Voir les certificats</a>
+    <a href="/keys">Voir les Clés</a>
   </body>
 
   <form method="post" action="/ipw/add">
